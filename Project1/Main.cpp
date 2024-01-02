@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Day1Prob1.h"
+#include "Day1.h"
 
 int main() {
-	std::cout << Day1Prob1();
+	std::cout << Day1Prob2::Solve();
 }
