@@ -8,38 +8,44 @@
 #include <algorithm>
 #include <unordered_map>
 
-int Day1Prob1() {
-	std::ifstream input("Input.txt");
-
-	int sum = 0;
-	std::string line;
-	while (std::getline(input, line)) 
-	{
-		char first = 0;
-		for (char c : line) 
-		{
-			if (std::isdigit(c)) {
-				first = c;
-				break;
-			}
-		}
-
-		char last = 0;
-		for (auto riter = line.rbegin(); riter != line.rend(); riter++) 
-		{
-			const char c = *riter;
-			if (std::isdigit(c)) {
-				last = c;
-				break;
-			}
-		}
-
-		const std::string digits = { first, last };
-		const int calibrationVal = std::stoi(digits);
-		sum += calibrationVal;
+class Day1Prob1 {
+public:
+	static int Solve() {
+		return Solve("Input.txt");
 	}
-	return sum;
-}
+	static int Solve(const std::string& filename) {
+		std::ifstream input(filename);
+
+		int sum = 0;
+		std::string line;
+		while (std::getline(input, line))
+		{
+			char first = 0;
+			for (char c : line)
+			{
+				if (std::isdigit(c)) {
+					first = c;
+					break;
+				}
+			}
+
+			char last = 0;
+			for (auto riter = line.rbegin(); riter != line.rend(); riter++)
+			{
+				const char c = *riter;
+				if (std::isdigit(c)) {
+					last = c;
+					break;
+				}
+			}
+
+			const std::string digits = { first, last };
+			const int calibrationVal = std::stoi(digits);
+			sum += calibrationVal;
+		}
+		return sum;
+	}
+};
 
 class Day1Prob2 {
 private:
