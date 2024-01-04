@@ -23,8 +23,12 @@
     <ClInclude Include="Day1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Day2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Input.txt" />
+    <Text Include="Texting.txt" />
   </ItemGroup>
 </Project>

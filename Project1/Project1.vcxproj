@@ -131,9 +131,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day1.h" />
+    <ClInclude Include="Day2.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Input.txt" />
+    <Text Include="Texting.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
